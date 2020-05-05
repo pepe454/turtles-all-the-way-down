@@ -20,5 +20,5 @@ Set configurations in spiral_drawing.py to create different patterns
   
   
 ## Set the rotate configuration to create rotating colors
-![](images/carousel.jpeg){:width="200px"}.
+![](images/carousel.jpeg){width=50%}.
 
