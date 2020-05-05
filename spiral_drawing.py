@@ -31,7 +31,7 @@ MIDORANGE = (192, 79, 0)
 PURPLE = (128, 0, 128)
 MIDPURPLE = (192, 0, 192)
 sunset = [MIDORANGE, MIDRED, DARKRED, DARKBLUE]
-ocean = [DARKGREEN, DARKBLUE, GREYGREEN, PURPLE]
+ocean = [GREEN, BLUE, CYAN, PINK]
 carousel = [RED, YELLOW, GREEN, YELLOW] # trying running this with rotate
 summer = [GREEN, YELLOW, GREEN, BLUE]
 
@@ -43,11 +43,11 @@ x = 1540 # width of the window
 y = int(x / aspect_ratio) # height of your screen
 size = [x, y]
 # Try out preset colorschemes or try out new ones
-colors = summer
+colors = ocean
 background = BLACK
 squares = 800 # number of squares drawn in the window
-shade = False # creates fading effect on the colors as spiral moves outward
-gradient = 1.05 # recommend 1.05 for dark colors (128-192) and 1.4 for light colors (255)
+shade = True # creates fading effect on the colors as spiral moves outward
+gradient = 1.5 # recommend 1.05 for dark colors (128-192) and 1.4 for light colors (255)
 rotate = False # rotates colors around the spiral
 same_colors = False # use the same color for all sides of a each square in the spiral
 curr_length = 4 # starting side length of the first square in the spiral
