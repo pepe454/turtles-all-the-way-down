@@ -2,11 +2,11 @@
 Create spiral images using the pygame library
 Generate different drawings based on configurations in spiral_drawing.py
 
-Spirals are started by drawing squares such that each side goes just past the following corner
+#### Spirals are started by drawing squares such that each side goes just past the following corner
 <img src="images/example1.jpeg" width="300">
-In the next iteration, the endpoints of the sides are the new corners, with each line being drawn just past the next corner
+#### In the next iteration, the endpoints of the sides are the new corners, with each line being drawn just past the next corner
 <img src="images/example2.jpeg" width="300">
-A couple iterations later
+#### A couple iterations later
 <img src="images/example3.jpeg" width="300">
   
 ## Configuration settings
