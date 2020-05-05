@@ -1,5 +1,5 @@
 # Turtles All the Way Down
-Create spiral images using the pygame library
+Create spiral images using the pygame library.
 Generate different drawings based on configurations in spiral_drawing.py
 
 ## Building a Spiral
