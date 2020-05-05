@@ -1,7 +1,10 @@
 import pygame
 from math import sqrt, sin, cos
 from numpy import arctan
+from os import path
 
+# try these colors or create your own!
+# each valid color is 3-tuple with values in range [0, 255]
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 WHITEGRAY = (192, 192, 192)
@@ -30,6 +33,7 @@ MIDPURPLE = (192, 0, 192)
 sunset = [MIDORANGE, MIDRED, DARKRED, DARKBLUE]
 ocean = [DARKGREEN, DARKBLUE, GREYGREEN, PURPLE]
 carousel = [RED, YELLOW, GREEN, YELLOW] # trying running this with rotate
+summer = [GREEN, YELLOW, GREEN, BLUE]
 
 #--------------CONFIGURATIONS----------------
 # various configurations change the way image is displayed
@@ -39,16 +43,17 @@ x = 1540 # width of the window
 y = int(x / aspect_ratio) # height of your screen
 size = [x, y]
 # Try out preset colorschemes or try out new ones
-colors = carousel
+colors = summer
+background = BLACK
 squares = 800 # number of squares drawn in the window
-shade = True # creates fading effect on the colors as spiral moves outward
+shade = False # creates fading effect on the colors as spiral moves outward
 gradient = 1.05 # recommend 1.05 for dark colors (128-192) and 1.4 for light colors (255)
-rotate = True # rotates colors around the spiral
+rotate = False # rotates colors around the spiral
 same_colors = False # use the same color for all sides of a each square in the spiral
-curr_length = 2 # starting side length of the first square in the spiral
+curr_length = 4 # starting side length of the first square in the spiral
 # determines how tightly spiral is wound - rate at which the side lengths grow linearly
 # use carefully, may cause divide by zero error for certain increments
-adder = 5
+adder = 4
 
 #--------------HELPER FUNCTIONS---------------
 distance = lambda p1, p2: sqrt((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2) # get distance b/t two points
@@ -72,7 +77,7 @@ screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Create a spiral drawing")
 done = False
 clock = pygame.time.Clock()
-screen.fill((0, 0, 0))
+screen.fill(background)
 
 #-----------------ARTWORK---------------------
 p1 = [x//2 - curr_length//2, y//2 - curr_length//2]
@@ -124,4 +129,4 @@ pygame.display.iconify()
 
 filename = input("Enter filename with no extension or 0 to quit: ")
 if filename != "0":
-    pygame.image.save(screen, filename + ".jpeg") 
+    pygame.image.save(screen, path.join("images", filename + ".jpeg")) 
